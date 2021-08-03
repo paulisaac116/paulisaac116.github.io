@@ -1,0 +1,125 @@
+:root {
+    --dark-purple: #6138F6;
+    --dark-purple-2: #41327f;
+    --vital-purple: #271675;
+    --white: #ffffff;
+    --mtop-section: 80px;
+
+}
+
+
+h2, 
+h2 + p {
+    padding: 0;
+    text-align: left;
+}
+
+header {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+header img {
+    width: 310px;
+}
+
+.forum-background {
+    height: 450px;
+}
+
+.forum-background .forum-musa-image {
+    width: 200px;
+}
+
+.program-description {
+    padding-top: 80px;
+    height: 600px;
+    padding-left: 80px;
+    padding-right: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: 
+    url('../images/medicinas_lila\ 1.png'), 
+    url('../images/Pastillas.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -260px 80px, 650px 30px;
+    
+}
+.program-description__list {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.presentation h2,
+.presentation h2 + p{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.event {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.speaker h2,
+.speaker h2 + p{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.speaker__list {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+@media (min-width: 1280px) {
+    .nav__show-mobile--menu,
+    .nav__exit-button {
+        display: none;
+    }
+    
+    .nav__show-desktop {
+        list-style: none;
+        display: flex;
+    }
+    .nav__show-desktop li a{
+        color: var(--dark-purple-2);
+        text-decoration: none;
+        font-size: 1.8rem;
+        margin-right: 40px;
+        font-weight: 700;
+    }
+    
+    .nav__show-desktop #login-button {
+        border: 2px solid var(--dark-purple-2);
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    .nav__show-desktop #register-button {
+        margin: 0;
+        color: var(--white);
+        background-color: var(--vital-purple);
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
+    .forum-musa-image {
+        margin-left: 40px;
+    }
+    
+    .presentation--slider {
+        padding: 0;
+        justify-content: center;
+    }
+    .presentation--slider::-webkit-scrollbar,
+    .speaker__list::-webkit-scrollbar {
+    height: 0;
+}
+    .event__card {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

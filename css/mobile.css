@@ -1,0 +1,466 @@
+/*
+Colores
+#C3AECD Rosado menú
+#00DFBE Verde (Tarjetas en vivo gradiente)
+#6138F6 Morado (Letras)
+#28326B Azul obscuro (Tarjetas pequeñas)
+
+#c5b1ce
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --light-purple: #c5b1ce;
+    --dark-purple: #6138F6;
+    --dark--purple-2: #41327f;
+    --vital-purple: #271675;
+    --vital--green: #01debe;
+    --dark--blue: #28326B;
+    --white: #ffffff;
+    --mtop-section: 60px;
+}
+
+html {
+    font-family: 'Raleway', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    text-align: center;
+}
+
+h2 {
+    font-size: 3.4rem;
+    font-weight: 700;
+    color: var(--dark-purple);
+}
+
+h2 + p {
+    padding: 0 30px;
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--light-purple);
+}
+
+header img {
+    width: 230px;
+}
+
+header nav{
+    background-color: var(--light-purple);
+}
+
+.nav__show-mobile--menu {
+    cursor: pointer;
+    color: var(--dark--purple-2);
+}
+
+.nav__hide-mobile {
+    display: none;
+}
+
+
+.forum-background {
+    height: 300px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    background-image: url('../images/set-virtual.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 400;
+}
+
+.forum-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--vital-purple);
+    opacity: .4;
+    z-index: 500;
+}
+
+.forum-background .forum-musa-image {
+    width: 120px;
+    position: relative;
+    top: 18px;
+    z-index: 600;
+}
+
+.background {
+    background: linear-gradient(180deg, rgba(234,229,249,1) 0%, rgba(211,241,238,1) 100%);
+}
+
+.program-description {
+    padding-top: 50px;
+    background-image: url('../images/medicinas_lila\ 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.program-description__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.program-description__list .program__card {
+    margin-top: 20px;
+    width: 250px;
+    height: 270px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--white);
+    opacity: .9;
+    border-radius: 20px;
+}
+
+.program-description__list .program__card h4{
+    margin-top: 15px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--dark-purple);
+}
+
+.program-description__list .program__card p{
+    margin-top: 10px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+
+/*      PPRESENTATIONS      */
+.presentation {
+    margin-top: var(--mtop-section);
+    text-align: center;
+}
+
+.presentation--slider {
+    height: 510px;
+    margin: 20px 0;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.presentation--slider::-webkit-scrollbar {
+    background-color: gainsboro;
+    height: 3px;
+}
+
+.presentation--slider::-webkit-scrollbar-thumb {
+    background-color: var(--dark-purple);
+}
+
+.presentation__doctor {
+    width: 300px;
+    height: 500px;
+    padding: 30px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: space-between;
+    border-radius: 30px;
+    scroll-snap-align: center;
+}
+
+.presentation__doctor::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 30%, rgba(1,222,190,1) 100%);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    z-index: 300;
+}
+
+.presentation__doctor h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--dark-purple);
+}
+
+.presentation__doctor .doctor--information p{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--dark-purple);
+}
+
+.doctor--information--country,
+.doctor--information--date {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doctor--information > p,
+.doctor--information--country,
+.doctor--information--date,
+.doctor--information--country + p, 
+.doctor--information button{
+    position: relative;
+    z-index: 400;
+}
+
+
+.doctor--information--country img {
+    width: 30px;
+    position: relative;
+    top: -6px;
+    margin-left: 10px;
+}
+
+.doctor--information--country + p {
+    margin-top: 10px;
+}
+
+.doctor--information--date i {
+    position: relative;
+    top: -1px;
+    margin-right: 10px;
+}
+
+.doctor--information button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: var(--dark-purple);
+    color: var(--white);
+}
+
+.presentation__doctor.doctor_1 {
+    background-image: url('../images/doctor-1.png');    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.presentation__doctor.doctor_2 {
+    background-image: url('../images/doctor-2.png');    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.presentation__doctor.doctor_3 {
+    background-image: url('../images/doctor-3.png');    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.presentation__doctor.doctor_4 {
+    background-image: url('../images/doctor-4.png');    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.event {
+    margin-top: var(--mtop-section);
+}
+
+.event__card {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.event__card .card {
+    width: 250px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.card img {
+    width: 258px;
+    position: relative;
+    left: -4px;
+}
+
+
+
+.event__card .card p {
+    height: 120px;
+    padding: 20px 16px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -28px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    color: var(--white);
+    background-color: var(--dark--blue);
+}
+
+/**     SPEAKER LIST        **/
+
+.speaker {
+    margin-top: var(--mtop-section);
+}
+
+.speaker__list {
+    height: 420px;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.speaker__list::-webkit-scrollbar {
+    background-color: gainsboro;
+    height: 3px;
+}
+
+.speaker__list::-webkit-scrollbar-thumb {
+    background-color: var(--dark-purple);
+}
+
+
+.speaker__list--card {
+    height: 370px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    margin-top: 30px;
+    width: 300px;
+    padding: 30px;
+    background-color: var(--white);
+    scroll-snap-align: center;
+}
+
+.speaker__list--card > img {
+    border-radius: 50%;
+    border: 3px solid var(--dark--purple-2);
+}
+
+.speaker--country {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.speaker--country img {
+    width: 35px;
+    margin-left: 6px;
+    position: relative;
+    top: -5px;
+}
+
+.speaker--country p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-purple);
+}
+
+.speaker--country + p {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.speaker--buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.speaker--buttons button{
+    padding: 0 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    background-color: var(--white);
+    border: 2px solid var(--dark-purple);
+    border-radius: 10px;
+    outline: none;
+    color: var(--dark-purple);
+}
+
+footer {
+    position: relative;
+    margin-top: 100px;
+    padding: 30px 0;
+    background-color: var(--vital--green);
+    background-image: url('../images/musa.png'), url('../images/musa.png');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: left, right;
+}
+
+
+.nav__show-mobile {
+    width: 60%;
+    background-color: var(--dark--blue);
+    opacity: .9;
+    list-style: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 500;
+}
+
+.nav__show-mobile li a {
+    display: block;
+    width: 100%;
+    padding: 1em 2em;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.nav__show-mobile li a:hover {
+    background-color: var(--dark-purple);
+}
+
+.nav__show-mobile li:nth-child(1){
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav__exit-button {
+    padding: 10px 20px;
+    color: var(--white);
+    cursor: pointer;
+}
